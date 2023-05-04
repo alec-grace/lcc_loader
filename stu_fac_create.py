@@ -1,5 +1,6 @@
 import random
 import names
+import departments_create
 from datetime import date, timedelta
 import random_address
 
@@ -145,7 +146,8 @@ def faculty_T():
     email2 = gen_email(fname, lname) if random.randint(0, 3) == 0 else ''
 
     # department id - approximated
-    deptID = str(random.randint(100, 199))
+    major_codes = list(departments_create.majors.keys())
+    deptID = major_codes[random.randint(0, len(major_codes) - 1)]
 
     # country
     country_code = "US"

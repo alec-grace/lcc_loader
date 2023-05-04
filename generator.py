@@ -13,12 +13,12 @@ def main():
 
     outfile = "py_generated_ddl.txt"
     with open(outfile, 'w') as o_file:
-        # o_file.write('/* Student inserts */\n\n')
-        # for i in range(4):
-        #     o_file.write(stu_fac_create.student_T() + '\n')
-        # o_file.write('\n/* Faculty inserts */\n\n')
-        # for i in range(4):
-        #     o_file.write(stu_fac_create.faculty_T() + '\n')
+        o_file.write('/* Student inserts */\n\n')
+        for i in range(4):
+            o_file.write(stu_fac_create.student_T() + '\n')
+        o_file.write('\n/* Faculty inserts */\n\n')
+        for i in range(4):
+            o_file.write(stu_fac_create.faculty_T() + '\n')
         o_file.write('\n/* Department inserts */\n\n')
         depts = departments_create.department_T()
         for row in depts:

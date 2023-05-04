@@ -1,16 +1,29 @@
+/* Student inserts */
+
+INSERT INTO Student_T VALUES("8347960291","Jessica","White","2005","2009","1991-09-01","f","3415 Bog Road","","Belvidere","05442","8529435698","","0Jessica2439White@yahoo.org","","US","VT");
+INSERT INTO Student_T VALUES("5710644776","Mark","Granados","1992","1992","1990-04-04","m","4525 West Frier Drive","","Glendale","85301","8854037641","","8Mark0Granados948@yahoo.net","","US","AZ");
+INSERT INTO Student_T VALUES("3369076652","David","Baumler","1995","1998","1995-05-15","f","9827 Davenport Avenue","","Youngstown","32466","7188270795","","563David096@hotmail.org","","US","FL");
+INSERT INTO Student_T VALUES("9466724934","Mary","Regan","2004","2007","1996-02-12","f","3620 Bentfield Drive","","Nashville","37013","1852567111","","74Regan4Mary76@bing.com","","US","TN");
+
+/* Faculty inserts */
+
+INSERT INTO Faculty_T VALUES("3134889548","Mark","Butterfield","professor","4477673857","14208","1996-06-08","1403 Lincoln Street","","Savannah","31401","","293MarkButterfield65@bing.net","38Mark6Butterfield12@bing.org","HI","US","GA");
+INSERT INTO Faculty_T VALUES("4523003821","Darlene","Schoch","professor","4256440854","48246","1955-05-06","2307 East 72nd Avenue","","Anchorage","99507","0610893580","1Darlene15Schoch74@yahoo.com","","CS","US","AK");
+INSERT INTO Faculty_T VALUES("6769936362","Jesse","Robinette","professor","3365367107","37761","1984-05-07","856 Milton Street","","Oakland","94607","","Jesse18Robinette186@gmail.com","","BU","US","CA");
+INSERT INTO Faculty_T VALUES("3000965784","Billy","Collins","adjunct","1903038312","98904","1968-05-09","2209 June Drive","","Nashville","37214","","0Collins2Billy344@gmail.com","","PH","US","TN");
 
 /* Department inserts */
 
-INSERT INTO Department_T VALUES("CS","Computer Science","False");
-INSERT INTO Department_T VALUES("BU","Business","False");
-INSERT INTO Department_T VALUES("DA","Data Analytics","True");
-INSERT INTO Department_T VALUES("TH","Theology","False");
-INSERT INTO Department_T VALUES("PH","Physics","False");
-INSERT INTO Department_T VALUES("PS","Psychology","False");
-INSERT INTO Department_T VALUES("MA","Math","False");
-INSERT INTO Department_T VALUES("EN","English","False");
-INSERT INTO Department_T VALUES("PL","Politics","False");
-INSERT INTO Department_T VALUES("CJ","Criminal Justice","False");
-INSERT INTO Department_T VALUES("EE","Electrical Engineering","False");
-INSERT INTO Department_T VALUES("CC","Cyber Criminology","False");
-INSERT INTO Department_T VALUES("HI","History","True");
+INSERT INTO Department_T VALUES("CS","Computer Science","1");
+INSERT INTO Department_T VALUES("BU","Business","1");
+INSERT INTO Department_T VALUES("DA","Data Analytics","1");
+INSERT INTO Department_T VALUES("TH","Theology","0");
+INSERT INTO Department_T VALUES("PH","Physics","1");
+INSERT INTO Department_T VALUES("PS","Psychology","1");
+INSERT INTO Department_T VALUES("MA","Math","1");
+INSERT INTO Department_T VALUES("EN","English","1");
+INSERT INTO Department_T VALUES("PL","Politics","1");
+INSERT INTO Department_T VALUES("CJ","Criminal Justice","1");
+INSERT INTO Department_T VALUES("EE","Electrical Engineering","0");
+INSERT INTO Department_T VALUES("CC","Cyber Criminology","1");
+INSERT INTO Department_T VALUES("HI","History","1");

@@ -24,7 +24,7 @@ def department_T():
 
     for key in majors:
         name = majors[key]
-        status = "True" if random.randint(0, 5) == 3 else "False"
+        status = "0" if random.randint(0, 5) == 3 else "1"
         departments.append(f"INSERT INTO Department_T VALUES(\"{key}\","
                            f"\"{name}\",\"{status}\");")
 

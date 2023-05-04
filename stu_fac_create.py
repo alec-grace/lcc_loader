@@ -2,11 +2,12 @@ import random
 import names
 from datetime import date, timedelta
 import random_address
-from random_address import real_random_address
 
 """
 creates insert statement for Student_T table
 """
+
+ID_list = []
 
 
 def student_T():
@@ -14,8 +15,17 @@ def student_T():
 
     # student id
     stuID = ''
-    for i in range(10):
-        stuID += str(random.randint(0, 9))
+    unique = False
+    while not unique:
+        for i in range(10):
+            stuID += str(random.randint(0, 9))
+
+        if stuID in ID_list:
+            stuID = ''
+            unique = False
+        else:
+            ID_list.append(stuID)
+            unique = True
 
     # first name
     fname = names.get_first_name()
@@ -46,7 +56,7 @@ def student_T():
     # city
     city = full_add["city"]
     # zip code
-    zip = full_add["postalCode"]
+    zip_code = full_add["postalCode"]
     # state code
     state = full_add["state"]
 
@@ -59,11 +69,11 @@ def student_T():
     email2 = gen_email(fname, lname) if random.randint(0, 3) == 0 else ''
 
     # country
-    country_code = "USA"
+    country_code = "US"
 
-    return f'{statement}{stuID},{fname},{lname},{start_yr},{yog},{b_day},{gender},{str1},' \
-           f'{str2},{city},{zip},{phone1},{phone2},{email},{email2},{country_code},' \
-           f'{state});'
+    return f'{statement}\"{stuID}\",\"{fname}\",\"{lname}\",\"{start_yr}\",\"{yog}\",\"{b_day}\",\"{gender}\",' \
+           f'\"{str1}\",\"{str2}\",\"{city}\",\"{zip_code}\",\"{phone1}\",\"{phone2}\",\"{email}\",\"{email2}\",' \
+           f'\"{country_code}\",\"{state}\");'
 
 
 """
@@ -73,6 +83,19 @@ creates insert statement for Faculty_T table
 
 def faculty_T():
     statement = "INSERT INTO Faculty_T VALUES("
+
+    # unique faculty ID
+    facID = ''
+    unique = False
+    while not unique:
+        for i in range(10):
+            facID += str(random.randint(0, 9))
+        if facID in ID_list:
+            facID = ''
+            unique = False
+        else:
+            ID_list.append(facID)
+            unique = True
 
     # first name
     fname = names.get_first_name()
@@ -125,11 +148,11 @@ def faculty_T():
     deptID = str(random.randint(100, 199))
 
     # country
-    country_code = "USA"
+    country_code = "US"
 
-    return f'{statement}{fname},{lname},{title},{phone1},{off_num},{b_day},{str1},' \
-           f'{str2},{city},{zip},{phone2},{email},{email2},{deptID},{country_code},' \
-           f'{state});'
+    return f'{statement}\"{facID}\",\"{fname}\",\"{lname}\",\"{title}\",\"{phone1}\",\"{off_num}\",\"{b_day}\",\"{str1}\",' \
+           f'\"{str2}\",\"{city}\",\"{zip}\",\"{phone2}\",\"{email}\",\"{email2}\",\"{deptID}\",\"{country_code}\",' \
+           f'\"{state}\");'
 
 
 def gen_email(fname, lname):
@@ -156,21 +179,3 @@ def gen_phone():
         total += str(num)
 
     return total
-
-
-"""
-dictionary for majors and minors to pull from
-"""
-majors = {
-    'CS': 'Computer Science',
-    'BU': 'Business',
-    'DA': 'Data Analytics',
-    'TH': 'Theology',
-    'PH': 'Physics',
-    'PS': 'Psychology',
-    'MA': 'Math',
-    'EN': 'English',
-    'PL': 'Politics',
-    'CJ': 'Criminal Justice',
-    'EE': 'Electrical Engineering'
-}

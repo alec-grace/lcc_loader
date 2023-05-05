@@ -1,5 +1,5 @@
 """
-dictionary for majors and minors to pull from
+dictionary for majors, minors, and departments to pull from
 """
 import random
 

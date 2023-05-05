@@ -1,6 +1,6 @@
 # Driver class for generating data for Local Community College project
 import randominfo
-
+import course_create
 import stu_fac_create
 import departments_create
 import names
@@ -15,6 +15,7 @@ def main():
     depts = departments_create.department_T()
     students = []
     faculty = []
+    courses = []
 
     with open(outfile, 'w') as o_file:
         # -----
@@ -23,14 +24,28 @@ def main():
         o_file.write('\n/* Department inserts */\n\n')
         for row in depts:
             o_file.write(row + "\n")
-        o_file.write('\n/* Student inserts */\n\n')
+
+        # -----
+        # Create courses
+        # -----
+        o_file.write('\n/* Course inserts */\n\n')
+        for i in range(15):
+            course = course_create.course_T()
+            courses.append(course)
+            o_file.write(course + "\n")
+
         # -----
         # Create students
         # -----
+        o_file.write('\n/* Student inserts */\n\n')
         for i in range(4):
             stu = stu_fac_create.student_T()
             students.append(stu)
             o_file.write(stu + '\n')
+
+        # -----
+        # Create Faculty
+        # -----
         o_file.write('\n/* Faculty inserts */\n\n')
         for i in range(4):
             fac = stu_fac_create.faculty_T()

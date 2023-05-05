@@ -2,29 +2,47 @@
 /* Department inserts */
 
 INSERT INTO Department_T VALUES("CS","Computer Science","1");
-INSERT INTO Department_T VALUES("BU","Business","0");
-INSERT INTO Department_T VALUES("DA","Data Analytics","0");
+INSERT INTO Department_T VALUES("BU","Business","1");
+INSERT INTO Department_T VALUES("DA","Data Analytics","1");
 INSERT INTO Department_T VALUES("TH","Theology","1");
 INSERT INTO Department_T VALUES("PH","Physics","0");
 INSERT INTO Department_T VALUES("PS","Psychology","1");
 INSERT INTO Department_T VALUES("MA","Math","1");
 INSERT INTO Department_T VALUES("EN","English","1");
 INSERT INTO Department_T VALUES("PL","Politics","1");
-INSERT INTO Department_T VALUES("CJ","Criminal Justice","0");
-INSERT INTO Department_T VALUES("EE","Electrical Engineering","0");
-INSERT INTO Department_T VALUES("CC","Cyber Criminology","0");
-INSERT INTO Department_T VALUES("HI","History","1");
+INSERT INTO Department_T VALUES("CJ","Criminal Justice","1");
+INSERT INTO Department_T VALUES("EE","Electrical Engineering","1");
+INSERT INTO Department_T VALUES("CC","Cyber Criminology","1");
+INSERT INTO Department_T VALUES("HI","History","0");
+
+/* Course inserts */
+
+INSERT INTO Course_T VALUES("41334","CS","temporary title","4.0","1");
+INSERT INTO Course_T VALUES("34325","CC","temporary title","4.0","1");
+INSERT INTO Course_T VALUES("34116","MA","temporary title","7.0","1");
+INSERT INTO Course_T VALUES("60393","HI","temporary title","3.0","1");
+INSERT INTO Course_T VALUES("29066","BU","temporary title","5.0","1");
+INSERT INTO Course_T VALUES("99930","PL","temporary title","4.0","1");
+INSERT INTO Course_T VALUES("18322","CJ","temporary title","6.0","1");
+INSERT INTO Course_T VALUES("45319","PL","temporary title","5.0","0");
+INSERT INTO Course_T VALUES("15321","TH","temporary title","6.0","1");
+INSERT INTO Course_T VALUES("23082","PL","temporary title","5.5","1");
+INSERT INTO Course_T VALUES("39223","TH","temporary title","6.0","1");
+INSERT INTO Course_T VALUES("41535","PL","temporary title","6.5","1");
+INSERT INTO Course_T VALUES("73986","CJ","temporary title","6.0","1");
+INSERT INTO Course_T VALUES("66454","CJ","temporary title","7.5","0");
+INSERT INTO Course_T VALUES("50319","CJ","temporary title","7.0","1");
 
 /* Student inserts */
 
-INSERT INTO Student_T VALUES("5687414128","Tamara","Brucculeri","1993","1997","1988-02-22","f","1513 Cathy Street","","Savannah","31415","2422356404","","TamaraBrucculeri53406@hotmail.net","","US","GA");
-INSERT INTO Student_T VALUES("3218628246","Saul","Rouse","1980","1982","1980-08-27","f","1352 Purdue Street","","San Leandro","94579","1082882360","3445617550","98Rouse99Saul0@bing.com","RouseSaul51618@yahoo.net","US","CA");
-INSERT INTO Student_T VALUES("2520338911","Maria","Marcus","1999","2007","1992-01-13","m","644 West Maple Street","#2","Fayetteville","72701","8330370191","","33MarcusMaria842@yahoo.net","","US","AR");
-INSERT INTO Student_T VALUES("0609419596","Joseph","Villarreal","1999","2008","1993-05-05","f","4812 Alton Place Northwest","","Washington","20016","5383623744","6343949433","7Villarreal03Joseph00@redmail.org","","US","DC");
+INSERT INTO Student_T VALUES("0771786423","Carly","Steakley","2015","2015","1997-09-07","m","420 D Street Northwest","","Ardmore","73401","7230526674","","45Steakley8476@yahoo.org","","US","OK");
+INSERT INTO Student_T VALUES("6974282822","Mary","Thomas","1992","1999","1987-01-14","f","1313 North Road","","Hinesburg","05461","4329067059","","3123Mary53@redmail.com","","US","VT");
+INSERT INTO Student_T VALUES("9427854999","James","Mitchell","2003","2003","2000-10-16","m","1430 East Audubon Road","","Montgomery","36111","9937904741","","37JamesMitchell667@redmail.com","Mitchell47James877@bing.com","US","AL");
+INSERT INTO Student_T VALUES("0767815160","Leroy","Puffinberger","2002","2007","1991-09-06","m","20250 North 67th Avenue","#2143","Glendale","85308","5271703587","","950Puffinberger042@hotmail.com","","US","AZ");
 
 /* Faculty inserts */
 
-INSERT INTO Faculty_T VALUES("1310715270","Anna","Cervantes","teaching assistant","3160054539","89167","1954-07-29","26 Battery Drive","","Tybee Island","31328","","4Anna64Cervantes43@yahoo.net","","MA","US","GA");
-INSERT INTO Faculty_T VALUES("7305742870","Lonnie","White","professsor","3964032898","45650","1974-04-27","26563 Chisholm Court","","Hayward","94544","","8Lonnie808White9@bing.net","","MA","US","CA");
-INSERT INTO Faculty_T VALUES("2435545602","Thomas","Pearson","professor","4246861356","17888","1977-05-05","826 Webster Street","","Hayward","94544","","Pearson992Thomas45@gmail.com","","TH","US","CA");
-INSERT INTO Faculty_T VALUES("8975198188","Ralph","Rivas","professor","9172367565","4497","1985-10-16","7650 West 68th Avenue","#315","Arvada","80004","","2006RalphRivas4@redmail.org","","TH","US","CO");
+INSERT INTO Faculty_T VALUES("7843183109","Vincent","Navarrete","professor","7918633057","33365","1997-07-10","1601 Northwest 22nd Street","","Oklahoma City","73106","","35005VincentNavarrete@gmail.net","","CC","US","OK");
+INSERT INTO Faculty_T VALUES("0606574370","Larry","Salzman","professor","4182883830","71849","1956-05-14","208 Towne Lake Way","","Pooler","31322","","246286Larry@gmail.com","","PH","US","GA");
+INSERT INTO Faculty_T VALUES("9446700348","Peggy","Hay","professor","2679591588","77506","1962-03-15","7374 West Walden Drive","","Littleton","80128","","2Peggy62Hay41@bing.org","3914PeggyHay8@hotmail.net","PL","US","CO");
+INSERT INTO Faculty_T VALUES("6155090871","Susan","Mccann","professor","7149105525","82418","1941-01-13","3904 October Woods Drive","","Nashville","37013","","4Susan1291Mccann@hotmail.net","","PS","US","TN");

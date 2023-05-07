@@ -5,14 +5,18 @@
 #     - Credit hours
 #     - Active status
 
+
 import departments_create
 import random
+
+id_list = []
 
 def course_T():
 
     courseID = ''
     for i in range(5):
         courseID += str(random.randint(0, 9))
+    id_list.append(courseID)
 
     depts = list(departments_create.majors.keys())
     code = depts[random.randint(0, len(depts) - 1)]

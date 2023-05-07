@@ -1,6 +1,7 @@
 # Driver class for generating data for Local Community College project
 import randominfo
 import course_create
+import section_create
 import stu_fac_create
 import departments_create
 import names
@@ -44,13 +45,21 @@ def main():
             o_file.write(stu + '\n')
 
         # -----
-        # Create Faculty
+        # Create faculty
         # -----
         o_file.write('\n/* Faculty inserts */\n\n')
         for i in range(4):
             fac = stu_fac_create.faculty_T()
             faculty.append(fac)
             o_file.write(fac + '\n')
+
+        # -----
+        # Create sections
+        # -----
+        o_file.write('\n/* Section inserts */\n\n')
+        for i in range(30):
+            o_file.write(section_create.section_T() + '\n')
+
     o_file.close()
 
 

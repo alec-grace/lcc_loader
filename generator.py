@@ -55,6 +55,7 @@ def main():
 
         # -----
         # Create sections
+        # Should work once Building_T and Room_T are completed
         # -----
         o_file.write('\n/* Section inserts */\n\n')
         for i in range(30):

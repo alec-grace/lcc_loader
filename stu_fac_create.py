@@ -9,7 +9,8 @@ creates insert statement for Student_T table
 """
 
 ID_list = []
-
+fac_list = []
+stu_list = []
 
 def student_T():
     statement = "INSERT INTO Student_T VALUES("
@@ -26,6 +27,7 @@ def student_T():
             unique = False
         else:
             ID_list.append(stuID)
+            stu_list.append(stuID)
             unique = True
 
     # first name
@@ -96,6 +98,7 @@ def faculty_T():
             unique = False
         else:
             ID_list.append(facID)
+            fac_list.append(facID)
             unique = True
 
     # first name

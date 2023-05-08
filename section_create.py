@@ -14,9 +14,12 @@
 
 import course_create
 import stu_fac_create
+import building_create
+import room_create
 import random
 
 course_sections = []
+
 
 def section_T():
 
@@ -41,7 +44,8 @@ def section_T():
 
     facID = random.choice(stu_fac_create.fac_list)
 
-    roomID = random.randint(1, 100)
+    room_building = random.choice(room_create.rooms)
+    roomID = room_building[0]
 
     start_times = []
     for i in range(8, 12):
@@ -52,7 +56,7 @@ def section_T():
 
     max_enroll = random.randrange(10, 51, 5)
 
-    buildingID = random.randint(1, 1000)
+    buildingID = room_building[1]
 
     day_choices = ['MWF', 'TR', 'MW', 'TRS', 'WFS', 'MWS', 'MTWRF', 'S', 'MWR', 'MTR']
     days = random.choice(day_choices)

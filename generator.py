@@ -9,11 +9,10 @@ import section_create
 import stu_fac_create
 import departments_create
 
-# import building_create
-# import names
-# import random
-# from random_address import real_random_address
-# from datetime import date, timedelta
+# tables left:
+#     - enrollment_T
+#     - Stu_maj_T
+#     - Stu_min_T
 
 
 def main():

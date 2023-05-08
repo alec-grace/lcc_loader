@@ -20,10 +20,11 @@ import random
 
 course_sections = []
 
+alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 
 def section_T():
 
-    alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+
 
     exists = False
 

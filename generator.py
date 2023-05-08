@@ -1,13 +1,17 @@
 # Driver class for generating data for Local Community College project
 import randominfo
+
+import building_create
 import course_create
 import section_create
 import stu_fac_create
 import departments_create
-import names
-import random
-from random_address import real_random_address
-from datetime import date, timedelta
+
+# import building_create
+# import names
+# import random
+# from random_address import real_random_address
+# from datetime import date, timedelta
 
 
 def main():
@@ -25,6 +29,13 @@ def main():
         o_file.write('\n/* Department inserts */\n\n')
         for row in depts:
             o_file.write(row + "\n")
+
+        # -----
+        # Create buildings
+        # -----
+        o_file.write('\n/* Building inserts */\n\n')
+        for i in range(10):
+            o_file.write(building_create.building_T() + "\n")
 
         # -----
         # Create courses

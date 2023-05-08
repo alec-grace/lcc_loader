@@ -2,6 +2,7 @@
 import randominfo
 
 import building_create
+import calendar_create
 import course_create
 import room_create
 import section_create
@@ -30,6 +31,12 @@ def main():
         o_file.write('\n/* Department inserts */\n\n')
         for row in depts:
             o_file.write(row + "\n")
+
+        # -----
+        # Create calendar
+        # -----
+        o_file.write('\n/* Calendar inserts */\n\n')
+        o_file.write(calendar_create.calendar_T() + '\n')
 
         # -----
         # Create buildings

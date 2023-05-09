@@ -11,7 +11,6 @@ import stu_fac_create
 import departments_create
 
 # tables left:
-#     - enrollment_T
 #     - Stu_maj_T
 #     - Stu_min_T
 

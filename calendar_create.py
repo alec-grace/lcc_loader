@@ -10,7 +10,7 @@ def calendar_T():
     all_statements = ''
     term_list = ['FA', 'WI', 'SP', 'SU']
 
-    for year in range(2000, 2030):
+    for year in range(2000, 2031):
         for term in term_list:
             midterm = str(year) + '-01-01'
             final = str(year) + '-12-31'

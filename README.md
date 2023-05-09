@@ -1,5 +1,5 @@
 # lcc_loader
-Final project for Database Management - a MySQL DDL and data generator
+Final project for Database Management - a MySQL data generator
 
 PLEASE PLEASE PLEASE understand... I was not able to spend the amount of time (especially in the design phase) 
 as I would have liked to for this project. There are terrible global variables, inefficient code, and inconsistent

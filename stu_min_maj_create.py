@@ -25,8 +25,17 @@ def stu_min_T():
         stuID = random.choice(stu_fac_create.stu_list)
         min_code = random.choice(list(departments_create.majors.keys()))
         combo = [stuID, min_code]
+        count = 0
         if combo in stu_mins:
-            exists = True
+            for thing in stu_mins:
+                if combo[0] == thing[0]:
+                    count += 1
+
+            if count >= 2:
+                exists = True
+            else:
+                stu_mins.append(combo)
+                exists = True
         else:
             stu_mins.append(combo)
             exists = False
@@ -45,8 +54,17 @@ def stu_maj_T():
         stuID = random.choice(stu_fac_create.stu_list)
         maj_code = random.choice(list(departments_create.majors.keys()))
         combo = [stuID, maj_code]
+        count = 0
         if combo in stu_majs:
-            exists = True
+            for thing in stu_majs:
+                if combo[0] == thing[0]:
+                    count += 1
+
+            if count >= 2:
+                exists = True
+            else:
+                stu_majs.append(combo)
+                exists = True
         else:
             stu_majs.append(combo)
             exists = False

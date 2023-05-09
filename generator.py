@@ -18,13 +18,22 @@ import stu_min_maj_create
 
 def main():
 
-    outfile = "py_generated_ddl.txt"
+    outfile = "py_generated_inserts.sql"
     depts = departments_create.department_T()
     students = []
     faculty = []
     courses = []
 
     with open(outfile, 'w') as o_file:
+        # Write the stuff not generated here so the whole file is generated
+        o_file.write('/* To view the code used for the creation of \n'
+                     'data please see: https://github.com/alec-grace/lcc_loader */\n\n'
+                     'use agrace072; \n\n'
+                     '/* Country inserts */\n\n'
+                     'INSERT INTO agrace072.Country_T SELECT * FROM aalbina.country_tbl;\n\n'
+                     '/* State inserts */\n\n'
+                     'INSERT INTO agrace072.State_T SELECT * FROM aalbina.st_tbl;\n')
+
         # -----
         # Create departments
         # -----
@@ -56,7 +65,7 @@ def main():
         # Create courses
         # -----
         o_file.write('\n/* Course inserts */\n\n')
-        for i in range(15):
+        for i in range(30):
             course = course_create.course_T()
             courses.append(course)
             o_file.write(course + "\n")
@@ -65,7 +74,7 @@ def main():
         # Create students
         # -----
         o_file.write('\n/* Student inserts */\n\n')
-        for i in range(4):
+        for i in range(50):
             stu = stu_fac_create.student_T()
             students.append(stu)
             o_file.write(stu + '\n')
@@ -74,7 +83,7 @@ def main():
         # Create faculty
         # -----
         o_file.write('\n/* Faculty inserts */\n\n')
-        for i in range(4):
+        for i in range(50):
             fac = stu_fac_create.faculty_T()
             faculty.append(fac)
             o_file.write(fac + '\n')
@@ -90,7 +99,7 @@ def main():
         # Create enrollments
         # -----
         o_file.write('\n/* Enrollment inserts */\n\n')
-        for i in range(10):
+        for i in range(100):
             o_file.write(enrollment_create.enrollment_T() + '\n')
 
         # -----
@@ -108,14 +117,14 @@ def main():
         # Create student majors
         # -----
         o_file.write('\n/* Student minor inserts */\n\n')
-        for i in range(10):
+        for i in range(100):
             o_file.write(stu_min_maj_create.stu_min_T() + '\n')
 
         # -----
         # Create student majors
         # -----
         o_file.write('\n/* Student major inserts */\n\n')
-        for i in range(10):
+        for i in range(100):
             o_file.write(stu_min_maj_create.stu_maj_T() + '\n')
 
     o_file.close()

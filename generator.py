@@ -4,6 +4,7 @@ import randominfo
 import building_create
 import calendar_create
 import course_create
+import enrollment_create
 import room_create
 import section_create
 import stu_fac_create
@@ -80,11 +81,17 @@ def main():
 
         # -----
         # Create sections
-        # Should work once Building_T and Room_T are completed
         # -----
         o_file.write('\n/* Section inserts */\n\n')
         for i in range(30):
             o_file.write(section_create.section_T() + '\n')
+
+        # -----
+        # Create enrollments
+        # -----
+        o_file.write('\n/* Enrollment inserts */\n\n')
+        for i in range(10):
+            o_file.write(enrollment_create.enrollment_T() + '\n')
 
     o_file.close()
 

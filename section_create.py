@@ -14,7 +14,6 @@
 
 import course_create
 import stu_fac_create
-import building_create
 import room_create
 import random
 
@@ -22,9 +21,10 @@ course_sections = []
 
 alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 
+course_sect_yr = []
+
+
 def section_T():
-
-
 
     exists = False
 
@@ -42,6 +42,8 @@ def section_T():
 
     term_list = ['FA', 'WI', 'SP', 'SU']
     term = random.choice(term_list)
+
+    course_sect_yr.append([sectionID, courseID, year, term])
 
     facID = random.choice(stu_fac_create.fac_list)
 

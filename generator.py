@@ -13,6 +13,7 @@ import departments_create
 # tables left:
 #     - Stu_maj_T
 #     - Stu_min_T
+import stu_min_maj_create
 
 
 def main():
@@ -91,6 +92,31 @@ def main():
         o_file.write('\n/* Enrollment inserts */\n\n')
         for i in range(10):
             o_file.write(enrollment_create.enrollment_T() + '\n')
+
+        # -----
+        # Create majors and minors
+        # -----
+        o_file.write('\n/* Major inserts */\n\n')
+        for statement in departments_create.major_T():
+            o_file.write(statement + '\n')
+
+        o_file.write('\n/* Minor inserts */\n\n')
+        for statement in departments_create.minor_T():
+            o_file.write(statement + '\n')
+
+        # -----
+        # Create student majors
+        # -----
+        o_file.write('\n/* Student minor inserts */\n\n')
+        for i in range(10):
+            o_file.write(stu_min_maj_create.stu_min_T() + '\n')
+
+        # -----
+        # Create student majors
+        # -----
+        o_file.write('\n/* Student major inserts */\n\n')
+        for i in range(10):
+            o_file.write(stu_min_maj_create.stu_maj_T() + '\n')
 
     o_file.close()
 
